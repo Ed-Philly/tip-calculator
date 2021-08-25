@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+    <script src="./index.js" defer></script>
+  </head>
+  <body>
+    <div class="title-wrapper">
+      <h1 class="title">spli</h1>
+      <h1 class="title">tter</h1>
+    </div>
+
+    <section class="container">
+      <section class="input-layout">
+        <section>
+          <span class="label">Bill</span>
+          <input type="number" name="bill" id="bill-input" />
+        </section>
+
+        <section>
+          <span class="label">Select Tip %</span>
+          <div class="selector-grid">
+            <button class="selectors" data-val="5">5%</button>
+            <button class="selectors" data-val="10">10%</button>
+            <button class="selectors" data-val="15">15%</button>
+            <button class="selectors" data-val="25">25%</button>
+            <button class="selectors" data-val="50">50%</button>
+            <div class="selectors btn-custom" data-val="0">Custom</div>
+          </div>
+        </section>
+
+        <section>
+          <span class="label">Number of People</span>
+          <p id="no-value">Can't be zero</p>
+          <input type="number" name="people" id="num-people-input" min="1" />
+        </section>
+      </section>
+
+      <section class="output-layout">
+        <section class="flex-wrapper">
+          <div>
+            <p class="desc-label">Tip Amount</p>
+            <p class="person-label">/ person</p>
+          </div>
+          <div>
+            <p id="tip-split" class="total">$0.00</p>
+          </div>
+        </section>
+        <section class="flex-wrapper">
+          <div>
+            <p class="desc-label">Total</p>
+            <p class="person-label">/ person</p>
+          </div>
+          <div>
+            <p id="bill-split" class="total">$0.00</p>
+          </div>
+        </section>
+        <button class="btn-reset">RESET</button>
+      </section>
+    </section>
+  </body>
+</html>
